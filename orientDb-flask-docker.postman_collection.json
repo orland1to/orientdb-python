@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "987085c5-4471-45fe-8a47-703565ca1f99",
+		"name": "orientDb-flask-docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/user/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "RhI422PHL5TUN2pERrGB2yr1qBmiqxW/d/bQD6/ALJwgKS6mfrR7TDyuwy6oz3ZQQsF1vHPnh9E4GZMrOqa6gQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\": {\"name\":\"Ana moreno\",\"id\":\"#69:2\"} }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						""
+					]
+				},
+				"description": "update user in db"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/user/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\": {\"id\":\"#69:2\"} }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						""
+					]
+				},
+				"description": "get an user from db"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/users/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						""
+					]
+				},
+				"description": "get all users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/user/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\":{\"name\":\"orlando moreno\"}}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						""
+					]
+				},
+				"description": "create new user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/user/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\":{\"id\":\"#77:6\",\"name\":\"test2 some\"}}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						""
+					]
+				},
+				"description": "update user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/user/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\":{\"id\":\"#77:5\"}}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						""
+					]
+				},
+				"description": "delete an user with the id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/relationship/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\":{\"from\":\"#33:0\",\"to\":\"#34:0\",\"relationship\":\"friends\"}}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/relationship/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"relationship",
+						""
+					]
+				},
+				"description": "create a relationship betwen two users"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/files/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "some other test",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/orlando/Downloads/dbkda_2016_2_20_50023.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/files/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"files",
+						""
+					]
+				},
+				"description": "add a new file in db"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/files/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"input\": {\"rid\":\"#69:45\"} }"
+				},
+				"url": {
+					"raw": "http://localhost:5000/files/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"files",
+						""
+					]
+				},
+				"description": "return the file saved in db , it only need the id"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
